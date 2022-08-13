@@ -19,7 +19,7 @@ System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.facebook.com/login/");
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(50000, TimeUnit.MILLISECONDS);
+		driver.manage().timeouts().implicitlyWait(500000, TimeUnit.MILLISECONDS);
 		WebElement email= driver.findElement(By.name("email"));
 		email.sendKeys("shar@gmail.com");
 		WebElement password = driver.findElement(By.xpath("//input[@type='password']"));
@@ -36,7 +36,7 @@ System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 	    {
 	    	System.out.println("sign up");
 	    	driver.get("https://www.facebook.com/signup");
-	    	driver.manage().timeouts().implicitlyWait(50000, TimeUnit.MILLISECONDS);
+	    	driver.manage().timeouts().implicitlyWait(500000, TimeUnit.MILLISECONDS);
 	    	System.out.println("Signed up successfully");
 	    	WebElement firstname = driver.findElement(By.name("firstname"));
 		    firstname.sendKeys("Sharmila");
@@ -97,8 +97,8 @@ System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 	    
 	    }
 	 
-	driver.close();
-	    
+	
+	    driver.close();
 	    
 	    
 	}

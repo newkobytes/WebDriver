@@ -72,29 +72,31 @@ System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 				}
 			
 			String gender ="Male";
-			if(gender=="Female")
-			{
-				WebElement female = driver.findElement(By.xpath("//input[@type='radio']"));
-			    female.click();	
-			}
-			else if (gender=="Male")
-			{
-				WebElement male = driver.findElement(By.xpath("//input[@value='2']"));
-				male.click();
-			}
-			else {
-				WebElement custom = driver.findElement(By.xpath("//input[@value='-1']"));
-				custom.click();
-			}
+			///Static path
+			//if(gender=="Female")
+			//{
+				//WebElement female = driver.findElement(By.xpath("//input[@type='radio']"));
+			    //female.click();	
+			//}
+			//else if (gender=="Male")
+			//{
+				//WebElement male = driver.findElement(By.xpath("//input[@value='2']"));
+				//male.click();
+			//}
+			//else {
+				//WebElement custom = driver.findElement(By.xpath("//input[@value='-1']"));
+				//custom.click();
+			//}
 		    
-			WebElement signup= driver.findElement(By.xpath("//button[@type='submit']"));
-			signup.click();
-			
+			//WebElement signup= driver.findElement(By.xpath("//button[@type='submit']"));
+			//signup.click();
 		
-			
+			///Dynamic path:
+		WebElement GenderRadiobtn= driver.findElement(By.xpath("////label[text()='" + gender + "']/following-sibling::input"));
+			GenderRadiobtn.click();
 	
 			
-	    
+	  
 	    }
 	 
 	
